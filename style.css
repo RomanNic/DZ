@@ -2,93 +2,65 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
+html,
 body {
-  margin: 0;
+  overflow-x: hidden;
 }
-nav {
-  height: 142px;
-  top: 30px;
-  left: 200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+.myNavbar {
+  margin-left: 20%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18ox;
 }
-
+.navbar-toggler {
+  border: none;
+}
 .logoOne {
   width: 73px;
   height: 105px;
-  margin-left: 40px;
+  margin-left: 200%;
 }
-
-.teaNav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  max-width: 562px;
-  height: 27px;
-  margin: 57px auto 0;
-  border: 1px solid black;
-  gap: 65px;
-  padding: 0 10px;
+.logoTwo {
+  margin-left: -50%;
 }
-@media (max-width: 600px) {
-  .teaNav {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-.banner {
+.baner {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/image/baner.png);
-  background-size: cover;
-  background-position: center;
+    url(image/baner.png);
   width: 100%;
-  height: 300px;
-  position: relative;
+  height: 500px;
+  top: 200px;
 }
-
-.bannerBlok {
+.banerBlok {
   position: absolute;
-  width: 80%;
-  max-width: 680px;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 680px;
+  height: 300px;
+  top: 380px;
+  left: 170px;
   color: white;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-
+.navIcon {
+  display: flex;
+  gap: 10px;
+}
+.marginNav {
+  margin-left: 100px;
+}
 .pOne {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-  .bannerBlok {
-    font-size: 0.8em;
-  }
-}
-
-h3 {
-  font-size: 1.5em;
+  font-size: 50px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
 }
 h3 {
-  text-align: center;
   font-size: 24px;
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
 }
 h1 {
+  margin-top: 100px;
+  margin-left: 25%;
   text-align: center;
-  margin: 100px auto 0;
   max-width: 700px;
-  font-size: 2.5em;
+  font-size: 40px;
   font-family: "Cormorant Garamond", serif;
   font-weight: 300;
   font-style: italic;
@@ -98,16 +70,12 @@ h1 {
   justify-content: space-evenly;
 }
 h2 {
+  padding: 55px 0px 0px 0px;
   text-align: center;
-  margin: 130px auto 0;
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
-  font-size: 2em;
-}
-@media (max-width: 600px) {
-  h2 {
-    font-size: 1.5em;
-  }
+  font-size: 40px;
+  margin-top: 130px;
 }
 .tea {
   width: 208px;
@@ -129,9 +97,7 @@ h2 {
   justify-content: space-evenly;
   gap: 20px;
   width: 1198px;
-  margin-left: 5%;
-  width: 85%;
-  margin-left: 10%;
+  margin-left: 8%;
 }
 .boxPeople {
   width: 300px;
@@ -141,7 +107,6 @@ h2 {
 }
 h6,
 .footerTextItalic {
-  text-align: center;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-style: italic;
@@ -177,12 +142,16 @@ h6,
   justify-content: center;
   margin-top: 40px;
 }
-button {
-  width: 149px;
+.btn {
+  border: 1px solid black;
   height: 51px;
+  width: 149px;
+  border-radius: 0;
 }
 button,
-.open {
+.submit,
+.open,
+.some-input {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   font-weight: 300;
@@ -262,6 +231,7 @@ submit {
 }
 .footerHeader {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .footerGap {
@@ -344,4 +314,158 @@ submit {
 }
 .stay {
   margin-left: 45%;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    margin-left: 5%;
+  }
+  #collections,
+  .prioritise {
+    flex-wrap: wrap;
+  }
+  .footerBlock,
+  #more {
+    flex-direction: column;
+  }
+  .stay {
+    margin-left: 15%;
+  }
+  .footerBlockItem {
+    margin-left: 7%;
+  }
+  .visa {
+    margin: 90px 0px 0px 50px;
+    gap: 65px;
+  }
+  .moreSize {
+    margin-left: 0%;
+  }
+  .formH2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 5%;
+  }
+  .form {
+    width: 768px;
+    height: 525px;
+  }
+  .input {
+    margin-top: 0%;
+    margin-left: 4%;
+  }
+  .some-input {
+    width: 90%;
+  }
+  .textBy {
+    margin-top: 10px;
+    margin-left: 4%;
+  }
+  .open {
+    text-align: center;
+    width: 640px;
+    height: 120px;
+  }
+  .people {
+    flex-wrap: wrap;
+    width: 85%;
+    gap: 10px;
+  }
+  #people {
+    height: 596px;
+  }
+  #footer {
+    margin-left: -5%;
+  }
+  .banerBlok {
+    left: 20px;
+  }
+  .logoOne {
+    margin-left: 70px;
+  }
+  .logoTwo {
+    margin-left: -10%;
+  }
+  .marginNav {
+    margin-left: 20px;
+  }
+  .myNavbar {
+    margin-left: -5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoOne {
+    margin-left: 30%;
+  }
+  .marginNav {
+    margin-left: 0px;
+  }
+  .pOne {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .banerBlok {
+    width: 440px;
+    top: 420px;
+  }
+  .baner {
+    height: 450px;
+  }
+  h1 {
+    font-size: 25px;
+    max-width: 470px;
+    margin-left: 0px;
+  }
+  .blogCommit {
+    flex-direction: column;
+    gap: 20px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+  .moreSize {
+    width: 400px;
+  }
+  .form {
+    width: 100%;
+    height: 430px;
+  }
+  #more {
+    margin-top: -20px;
+    gap: 80px;
+  }
+  .formH2 {
+    margin-top: -15px;
+  }
+  #footer {
+    width: 105%;
+  }
+  .footerGap {
+    width: 200px;
+  }
+  .company {
+    margin-left: 25px;
+  }
+  .products {
+    margin-left: 25px;
+  }
+  .stay {
+    margin-left: 20%;
+  }
+  .footerTextItalic {
+    width: 390px;
+  }
+  .footerfontSize {
+    width: 390px;
+  }
+  .footerLogo {
+    margin-left: 45%;
+  }
+  .ourTea {
+    margin-top: -100px;
+  }
 }
